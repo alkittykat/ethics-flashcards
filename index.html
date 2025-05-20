@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fichas Interactivas - Ética Judicial y Reglas Modelo</title>
+    <style>
+        header {
+            background: linear-gradient(to right, #1565c0, #6a1b9a);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 40px;
+        }
+    
+        body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 20px; }
+        .card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .card { width: 45%; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 20px; cursor: pointer; transition: transform 0.3s; }
+        .card:hover { transform: scale(1.02); }
+        .front, .back { display: none; }
+        .front.show, .back.show { display: block; }
+        .canon { background: #e3f2fd; }
+        .regla { background: #fce4ec; }
+        .title { font-weight: bold; font-size: 1.1em; margin-bottom: 10px; }
+        .back div { margin-bottom: 6px; }
+        .button-container { text-align: center; margin-bottom: 20px; }
+        button { padding: 10px 20px; font-size: 1em; cursor: pointer; }
+    </style>
+    <script>
+        function toggleCard(id) {
+            var front = document.getElementById("front" + id);
+            var back = document.getElementById("back" + id);
+            front.classList.toggle("show");
+            back.classList.toggle("show");
+        }
+        function showAll() {
+            let backs = document.querySelectorAll('.back');
+            let fronts = document.querySelectorAll('.front');
+            backs.forEach(b => b.classList.add('show'));
+            fronts.forEach(f => f.classList.remove('show'));
+        }
+    
+        function hideAll() {
+            let backs = document.querySelectorAll('.back');
+            let fronts = document.querySelectorAll('.front');
+            backs.forEach(b => b.classList.remove('show'));
+            fronts.forEach(f => f.classList.add('show'));
+        }
+    </script>
+
+</head>
+<body>
+<header><h1>Fichas Interactivas de Ética Judicial y Reglas Modelo</h1><p>Haz clic en cada tarjeta para revelar el contenido. Usa los botones para estudiar más eficientemente.</p></header>
+    <h1>Fichas Interactivas – Ética Judicial y Reglas Modelo</h1>
+    <p>Haz clic en cada tarjeta para ver el contenido completo o utiliza el botón para mostrar todas.</p>
+    <div class="button-container">
+        
+    <button onclick="showAll()">Mostrar todas las respuestas</button>
+    <button onclick="hideAll()">Ocultar todas las respuestas</button>
+    
+    </div>
+    <div class="card-container">
+
+    <div class="card canon" onclick="toggleCard(1)">
+        <div class="front show" id="front1">
+            <div class="title">🧾 3 (Canon)</div>
+        </div>
+        <div class="back" id="back1">
+            <div><strong>📌 Tema principal:</strong> Independencia judicial</div>
+            <div><strong>📖 Contenido esencial:</strong> Debe mantenerse tanto en lo individual como institucional.</div>
+            <div><strong>📝 Observaciones clave:</strong> Fundamental para la imparcialidad judicial.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(2)">
+        <div class="front show" id="front2">
+            <div class="title">🧾 5 (Canon)</div>
+        </div>
+        <div class="back" id="back2">
+            <div><strong>📌 Tema principal:</strong> Prohibicion de discrimen</div>
+            <div><strong>📖 Contenido esencial:</strong> Prohibe trato desigual por raza, genero, ideas, etc.</div>
+            <div><strong>📝 Observaciones clave:</strong> Aplica al juez, partes y personal del tribunal.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(3)">
+        <div class="front show" id="front3">
+            <div class="title">🧾 7 (Canon)</div>
+        </div>
+        <div class="back" id="back3">
+            <div><strong>📌 Tema principal:</strong> Disciplina judicial</div>
+            <div><strong>📖 Contenido esencial:</strong> Juez debe promover procesos contra conducta antietica en el sistema.</div>
+            <div><strong>📝 Observaciones clave:</strong> Deber afirmativo de reportar faltas.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(4)">
+        <div class="front show" id="front4">
+            <div class="title">🧾 8 (Canon)</div>
+        </div>
+        <div class="back" id="back4">
+            <div><strong>📌 Tema principal:</strong> Caracter judicial</div>
+            <div><strong>📖 Contenido esencial:</strong> Deben ser laboriosos, prudentes, serenos e imparciales.</div>
+            <div><strong>📝 Observaciones clave:</strong> Estandares personales del juez.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(5)">
+        <div class="front show" id="front5">
+            <div class="title">🧾 11 (Canon)</div>
+        </div>
+        <div class="back" id="back5">
+            <div><strong>📌 Tema principal:</strong> Intervencion activa</div>
+            <div><strong>📖 Contenido esencial:</strong> Debe intervenir para evitar dilaciones o injusticias.</div>
+            <div><strong>📝 Observaciones clave:</strong> Juez no es mero arbitro pasivo.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(6)">
+        <div class="front show" id="front6">
+            <div class="title">🧾 12 (Canon)</div>
+        </div>
+        <div class="back" id="back6">
+            <div><strong>📌 Tema principal:</strong> Entrevistas privadas</div>
+            <div><strong>📖 Contenido esencial:</strong> Prohibe conversaciones ex parte.</div>
+            <div><strong>📝 Observaciones clave:</strong> Salvo en casos no contenciosos y con cautela.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(7)">
+        <div class="front show" id="front7">
+            <div class="title">🧾 14 (Canon)</div>
+        </div>
+        <div class="back" id="back7">
+            <div><strong>📌 Tema principal:</strong> Respeto en sala</div>
+            <div><strong>📖 Contenido esencial:</strong> Debe intervenir ante conducta impropia; prohibe ridiculizar.</div>
+            <div><strong>📝 Observaciones clave:</strong> Claves para preservar la solemnidad del tribunal.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(8)">
+        <div class="front show" id="front8">
+            <div class="title">🧾 15 (Canon)</div>
+        </div>
+        <div class="back" id="back8">
+            <div><strong>📌 Tema principal:</strong> Uso de medios</div>
+            <div><strong>📖 Contenido esencial:</strong> Regula fotografias, grabaciones y transmisiones.</div>
+            <div><strong>📝 Observaciones clave:</strong> Tiene un reglamento especial.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(9)">
+        <div class="front show" id="front9">
+            <div class="title">🧾 27 (Canon)</div>
+        </div>
+        <div class="back" id="back9">
+            <div><strong>📌 Tema principal:</strong> Prohibicion de practica privada</div>
+            <div><strong>📖 Contenido esencial:</strong> No puede ejercer abogacia ni notaria salvo funciones minimas.</div>
+            <div><strong>📝 Observaciones clave:</strong> Salvo autorizacion documental legal.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(10)">
+        <div class="front show" id="front10">
+            <div class="title">🧾 28 (Canon)</div>
+        </div>
+        <div class="back" id="back10">
+            <div><strong>📌 Tema principal:</strong> Actividad politica</div>
+            <div><strong>📖 Contenido esencial:</strong> Jueces deben abstenerse de participar en politica activa.</div>
+            <div><strong>📝 Observaciones clave:</strong> Solo pueden ejercer el voto.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(11)">
+        <div class="front show" id="front11">
+            <div class="title">🧾 35 (Canon)</div>
+        </div>
+        <div class="back" id="back11">
+            <div><strong>📌 Tema principal:</strong> Regalos</div>
+            <div><strong>📖 Contenido esencial:</strong> Prohibe aceptar regalos, favores o prestamos con vinculos procesales.</div>
+            <div><strong>📝 Observaciones clave:</strong> Excepciones bajo condiciones muy restrictivas.</div>
+        </div>
+    </div>
+    
+    <div class="card canon" onclick="toggleCard(12)">
+        <div class="front show" id="front12">
+            <div class="title">🧾 38 (Canon)</div>
+        </div>
+        <div class="back" id="back12">
+            <div><strong>📌 Tema principal:</strong> Uso del cargo</div>
+            <div><strong>📖 Contenido esencial:</strong> No puede usarse para beneficio personal o recaudacion de fondos.</div>
+            <div><strong>📝 Observaciones clave:</strong> Evita conflictos de interes y apariencia de corrupcion.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(13)">
+        <div class="front show" id="front13">
+            <div class="title">🧾 1.4 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back13">
+            <div><strong>📌 Tema principal:</strong> Comunicacion con el cliente</div>
+            <div><strong>📖 Contenido esencial:</strong> Explicacion necesaria para decisiones informadas.</div>
+            <div><strong>📝 Observaciones clave:</strong> No detallado en CE de PR.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(14)">
+        <div class="front show" id="front14">
+            <div class="title">🧾 1.5 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back14">
+            <div><strong>📌 Tema principal:</strong> Honorarios</div>
+            <div><strong>📖 Contenido esencial:</strong> No deben ser irrazonables.</div>
+            <div><strong>📝 Observaciones clave:</strong> CE usa otros criterios; RM enfatiza razonabilidad.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(15)">
+        <div class="front show" id="front15">
+            <div class="title">🧾 1.6 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back15">
+            <div><strong>📌 Tema principal:</strong> Confidencialidad</div>
+            <div><strong>📖 Contenido esencial:</strong> Permite divulgar para evitar dano sustancial.</div>
+            <div><strong>📝 Observaciones clave:</strong> Mas permisiva que CE en ciertos casos.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(16)">
+        <div class="front show" id="front16">
+            <div class="title">🧾 1.7 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back16">
+            <div><strong>📌 Tema principal:</strong> Conflicto de intereses</div>
+            <div><strong>📖 Contenido esencial:</strong> Permitido con consentimiento informado escrito.</div>
+            <div><strong>📝 Observaciones clave:</strong> CE es mas restrictivo.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(17)">
+        <div class="front show" id="front17">
+            <div class="title">🧾 1.8 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back17">
+            <div><strong>📌 Tema principal:</strong> Transacciones con clientes</div>
+            <div><strong>📖 Contenido esencial:</strong> Solo si es justo, razonable y con revelacion escrita.</div>
+            <div><strong>📝 Observaciones clave:</strong> Incluye prohibicion de relaciones sexuales.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(18)">
+        <div class="front show" id="front18">
+            <div class="title">🧾 1.10 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back18">
+            <div><strong>📌 Tema principal:</strong> Conflictos imputados</div>
+            <div><strong>📖 Contenido esencial:</strong> El conflicto se puede extender al bufete.</div>
+            <div><strong>📝 Observaciones clave:</strong> CE no lo regula directamente.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(19)">
+        <div class="front show" id="front19">
+            <div class="title">🧾 1.13 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back19">
+            <div><strong>📌 Tema principal:</strong> Organizacion como cliente</div>
+            <div><strong>📖 Contenido esencial:</strong> Regula relaciones con personas juridicas.</div>
+            <div><strong>📝 Observaciones clave:</strong> Apenas tratado en CE de PR.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(20)">
+        <div class="front show" id="front20">
+            <div class="title">🧾 1.14 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back20">
+            <div><strong>📌 Tema principal:</strong> Cliente con capacidad disminuida</div>
+            <div><strong>📖 Contenido esencial:</strong> Deberes especificos para proteger sus intereses.</div>
+            <div><strong>📝 Observaciones clave:</strong> No hay equivalente en CE de PR.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(21)">
+        <div class="front show" id="front21">
+            <div class="title">🧾 1.15 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back21">
+            <div><strong>📌 Tema principal:</strong> Manejo de fondos de cliente</div>
+            <div><strong>📖 Contenido esencial:</strong> Requiere cuentas separadas y registro.</div>
+            <div><strong>📝 Observaciones clave:</strong> CE lo regula indirectamente y por ley IOLTA.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(22)">
+        <div class="front show" id="front22">
+            <div class="title">🧾 1.16 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back22">
+            <div><strong>📌 Tema principal:</strong> Renuncia a representacion</div>
+            <div><strong>📖 Contenido esencial:</strong> Por repugnancia o carga irrazonable.</div>
+            <div><strong>📝 Observaciones clave:</strong> No tan detallado en CE.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(23)">
+        <div class="front show" id="front23">
+            <div class="title">🧾 1.17 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back23">
+            <div><strong>📌 Tema principal:</strong> Venta de practica</div>
+            <div><strong>📖 Contenido esencial:</strong> Condiciones eticas de la venta del bufete.</div>
+            <div><strong>📝 Observaciones clave:</strong> No hay regla equivalente.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(24)">
+        <div class="front show" id="front24">
+            <div class="title">🧾 1.18 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back24">
+            <div><strong>📌 Tema principal:</strong> Cliente prospectivo</div>
+            <div><strong>📖 Contenido esencial:</strong> Impone deberes aunque no haya contrato.</div>
+            <div><strong>📝 Observaciones clave:</strong> CE de PR no lo contempla.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(25)">
+        <div class="front show" id="front25">
+            <div class="title">🧾 3.3 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back25">
+            <div><strong>📌 Tema principal:</strong> Veracidad ante el tribunal</div>
+            <div><strong>📖 Contenido esencial:</strong> No omitir jurisprudencia adversa conocida.</div>
+            <div><strong>📝 Observaciones clave:</strong> No hay regla tan especifica.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(26)">
+        <div class="front show" id="front26">
+            <div class="title">🧾 3.8 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back26">
+            <div><strong>📌 Tema principal:</strong> Fiscalia</div>
+            <div><strong>📖 Contenido esencial:</strong> Deberes eticos del fiscal detallados.</div>
+            <div><strong>📝 Observaciones clave:</strong> Mas extensa que canon local correspondiente.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(27)">
+        <div class="front show" id="front27">
+            <div class="title">🧾 5.3 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back27">
+            <div><strong>📌 Tema principal:</strong> Personal no abogado</div>
+            <div><strong>📖 Contenido esencial:</strong> Responsables por actos de sus asistentes.</div>
+            <div><strong>📝 Observaciones clave:</strong> No esta en CE de PR.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(28)">
+        <div class="front show" id="front28">
+            <div class="title">🧾 6.1 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back28">
+            <div><strong>📌 Tema principal:</strong> Servicios pro bono</div>
+            <div><strong>📖 Contenido esencial:</strong> Horas anuales y apoyo economico.</div>
+            <div><strong>📝 Observaciones clave:</strong> CE de PR no establece horas especificas.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(29)">
+        <div class="front show" id="front29">
+            <div class="title">🧾 7.3 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back29">
+            <div><strong>📌 Tema principal:</strong> Contacto con potenciales clientes</div>
+            <div><strong>📖 Contenido esencial:</strong> Regulacion del uso de tecnologia y comunicacion directa.</div>
+            <div><strong>📝 Observaciones clave:</strong> CE no contempla regulacion tecnologica moderna.</div>
+        </div>
+    </div>
+    
+    <div class="card regla" onclick="toggleCard(30)">
+        <div class="front show" id="front30">
+            <div class="title">🧾 7.6 (Regla Modelo)</div>
+        </div>
+        <div class="back" id="back30">
+            <div><strong>📌 Tema principal:</strong> Donativos politicos</div>
+            <div><strong>📖 Contenido esencial:</strong> Prohibe contratos si hubo donativos con ese fin.</div>
+            <div><strong>📝 Observaciones clave:</strong> No regulado expresamente en CE.</div>
+        </div>
+    </div>
+    
+    </div>
+<footer>&copy; 2025 Ana | Flashcards de estudio para Derecho</footer>
+</body>
+</html>
